@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# Build the Docker image from the Dockerfile
-echo "Building the Docker image..."
-docker build -t my-model-api .
+# Step 1: Build the Docker image
+docker build -t model-api .
 
-# Run the Docker container
-echo "Running the Docker container..."
-docker run -p 8080:8080 my-model-api
-
-# Print message after the container starts
-echo "API is now running on http://127.0.0.1:8080"
+# Step 2: Run the Docker container
+docker run -p 8000:8000 --name model-api-container model-api

@@ -55,6 +55,6 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 
-# Run the Flask application on all available IP addresses (0.0.0.0) at port 8080
+# Run the Flask application at port 8000
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(port=8000)
